@@ -1,18 +1,9 @@
-# Retropie-cleanup
+# RetroPie-Tools
 
-A simple script for cleaning up rom files without artwork from Retropie
+A collection of simple python scripts that I use for cleaning up my RetroPie installation!
 
-To run, simply type:
+* `remove-imageless-roms.py` - removes roms that do not have any artwork
+* `remove-imageless-roms.py` - removes images that do not have any roms (for instance when rom has been deleted)
+* More coming soon!
 
-`sudo python ./cleanup.py`
-
-Then after carefully reading the prompt, type "yes" to proceed. That is your last chance to backout before cleanup.py deletes all your roms without artwork.
-
-### How this works ###
-
-1. Loops through each directory in `/home/pi/RetroPie/roms`
-2. Checks if the directory is in the `allowed_systems` array (ports and scummvm are excluded)
-3. If it is, we loop through each file in that directory
-4. For each file in the directory we check if there is a corrosponding romname-image.jpg in `/opt/retropie/configs/all/emulationstation/downloaded_images/$system
-5. If there isn't a matching image file, we delete the rom
-6. GOTO 1`
+Got a suggestion for a useful script? Please send suggestions via the issues tab!
