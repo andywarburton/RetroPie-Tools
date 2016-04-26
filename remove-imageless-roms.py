@@ -34,10 +34,10 @@ question = """
 
 user_input = raw_input(question)
 
-if user_input == 'DELETE' or user_input == 'delete' or user_input == 'test' or user_input == 'TEST' or user_input == 'clean' or user_input == 'CLEAN' :
+if user_input.upper() in ['DELETE', 'TEST','CLEAN']:
 
     # for the cleanup process, we need somewhere to put our backups
-    if user_input == 'clean' or user_input == 'CLEAN':
+    if user_input.upper() == 'CLEAN':
         if not os.path.isdir(bak_dir):
             os.makedirs(bak_dir)
 
@@ -65,13 +65,13 @@ if user_input == 'DELETE' or user_input == 'delete' or user_input == 'test' or u
                     if not os.path.isfile(image_path):
                         ## no image found, we should delete the rom!
                         
-                        if user_input == 'delete' or user_input == 'DELETE':
+                        if user_input.upper() == 'DELETE':
 
                             print "DELETING: " + system_name + "/" + rom_name + " (" + filename + ")"
                             os.remove(file_path)
                             delete_count += 1
 
-                        elif user_input == 'clean' or user_input == 'CLEAN':
+                        elif user_input.upper() == 'CLEAN'
 
                             print "CLEANING: " + system_name + "/" + rom_name + " (" + filename + ")"
                             system_bak_dir = bak_dir + '/' + system_name
@@ -91,11 +91,11 @@ if user_input == 'DELETE' or user_input == 'delete' or user_input == 'test' or u
 
     remaining_roms = total_count - delete_count
     
-    if user_input == 'delete' or user_input == 'DELETE':
+    if user_input.upper() == 'DELETE':
         print "\n--------------------------------------------------------------------"
         print "CLEANUP COMPLETE: " + str(delete_count) + " of " + str(total_count) + " files have been deleted! (" + str(remaining_roms) + " remain)"
         print "--------------------------------------------------------------------"
-    elif user_input == 'clean' or user_input == 'CLEAN':
+    elif user_input.upper() == 'CLEAN':
         print "\n--------------------------------------------------------------------"
         print "CLEAN COMPLETE: " + str(delete_count) + " of " + str(total_count) + " files have been moved!  (" + str(remaining_roms) + " remain)"
         print "--------------------------------------------------------------------"
