@@ -88,7 +88,7 @@ if user_input in ['DELETE', 'TEST','CLEAN']:
                             os.remove(file_path)
                             delete_count += 1
 
-                        elif user_input == 'CLEAN'
+                        elif user_input == 'CLEAN':
 
                             print "CLEANING: " + system_name + "/" + rom_name + " (" + filename + ")"
                             system_bak_dir = bak_dir + '/' + system_name
