@@ -130,8 +130,7 @@ if user_input in ['DELETE','TEST','CLEAN']:
 
     print "\n" + spacer
     print user_input + " COMPLETE: " + str(delete_count) + " of " +\
-        str(total_count) + " are ripe to be tidied!  (" +\
-        str(remaining_roms) + " remain)"
+        str(total_count) + " total (" str(remaining_roms) + " remain)"
     print spacer
 
 else:
