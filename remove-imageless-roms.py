@@ -93,7 +93,7 @@ if user_input in ['DELETE','TEST','CLEAN']:
 
                     total_count += 1
 
-                    image_path = img_dir + '/' + system_name + '/' +
+                    image_path = img_dir + '/' + system_name + '/' +\
                                     rom_name + '-image.jpg'
 
                     if not os.path.isfile(image_path):
@@ -101,14 +101,14 @@ if user_input in ['DELETE','TEST','CLEAN']:
 
                         if user_input == 'DELETE':
 
-                            print "DELETING: " + system_name + "/" + rom_name +
+                            print "DELETING: " + system_name + "/" + rom_name +\
                                     " (" + filename + ")"
                             os.remove(file_path)
                             delete_count += 1
 
                         elif user_input == 'CLEAN':
 
-                            print "CLEANING: " + system_name + "/" + rom_name +
+                            print "CLEANING: " + system_name + "/" + rom_name +\
                                     " (" + filename + ")"
                             system_bak_dir = bak_dir + '/' + system_name
                             bak_file_path = system_bak_dir + '/' + filename
@@ -121,7 +121,7 @@ if user_input in ['DELETE','TEST','CLEAN']:
 
                         else:
 
-                            print "TESTING: " + system_name + "/" + rom_name +
+                            print "TESTING: " + system_name + "/" + rom_name +\
                                     " (" + filename + ")"
                             ## do nothing
                             delete_count += 1
@@ -129,8 +129,8 @@ if user_input in ['DELETE','TEST','CLEAN']:
     remaining_roms = total_count - delete_count
 
     print "\n" + spacer
-    print user_input + " COMPLETE: " + str(delete_count) + " of " +
-        str(total_count) + " are ripe to be tidied!  (" +
+    print user_input + " COMPLETE: " + str(delete_count) + " of " +\
+        str(total_count) + " are ripe to be tidied!  (" +\
         str(remaining_roms) + " remain)"
     print spacer
 
