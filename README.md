@@ -12,7 +12,7 @@ To run, simply copy the above file to any location on your Raspberry Pi and type
 
 Then follow the onscreen instructions!
 
-# TODO:
+### TODO: ###
 
 * `rm-romless-images.py` - (unstarted) removes images that do not have any roms (for instance when rom has been deleted)
 * `rm-non-english-roms.py` - (unstarted) removes all roms that are not in English, adaptable to any language!
